@@ -9,10 +9,7 @@ const Navigation = ({ match: { params: { lang, section } } }) => {
   return (
     <Headroom>
       <AppBar position="static">
-        <div>
-          <h1 className="mdc-typography--title">MUN Manager</h1>
-        </div>
-        <Tabs value={section}>
+        <Tabs value={section} scrollable>
           <Tab
             component={Link}
             to={`/app/${lang}/session`}
@@ -30,6 +27,12 @@ const Navigation = ({ match: { params: { lang, section } } }) => {
             to={`/app/${lang}/journal`}
             value={'journal'}
             label={'journal'}
+          />
+          <Tab
+            component={Link}
+            to={`/app/${lang}/stats`}
+            value={'stats'}
+            label={'stats'}
           />
           <Tab
             component={Link}

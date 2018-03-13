@@ -1,17 +1,22 @@
 import React from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import Navigation from '../components/Navigation'
-const Debate = () => <div>Sección de debate</div>
-const Settings = () => <div>App Settings</div>
+import { Debate, Settings, Stats, Voting, Journal, Session } from './sections'
 
 const SectionRoutes = ({ match }) => (
-  <div>
+  <div style={{ backgroundColor: '#e0e0e0', height: '100vh' }}>
     <Navigation />
-    <Switch>
-      <Route path={'/app/:lang/debate'} component={Debate} />
-      <Route path={'/app/:lang/settings'} component={Settings} />
-      <Redirect to={`${match.url}/debate`} />
-    </Switch>
+    <div className="mdc-layout-grid" style={{ maxWidth: 1440 }}>
+      <Switch>
+        <Route path={'/app/:lang/debate'} component={Debate} />
+        <Route path={'/app/:lang/session'} component={Session} />
+        <Route path={'/app/:lang/settings'} component={Settings} />
+        <Route path={'/app/:lang/journal'} component={Journal} />
+        <Route path={'/app/:lang/stats'} component={Stats} />
+        <Route path={'/app/:lang/voting'} component={Voting} />
+        <Redirect to={`${match.url}/debate`} />
+      </Switch>
+    </div>
   </div>
 )
 

@@ -3,7 +3,13 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+.nm {
+  margin: 0px;
+}
 
+.md-padding {
+  padding: 8px;
+}
 .text-center {
   text-align: center;
 }
@@ -14,6 +20,10 @@ body {
 }
 .layout-align-center {
   justify-content: center;
+}
+.layout-align-start-center {
+  justify-content: flex-start;
+  align-items: center;
 }
 .nm-b {
   margin-bottom: 0px;

@@ -13,6 +13,7 @@
     "graphql-tag": "^2.8.0",
     "lodash": "^4.17.5",
     "material-ui": "^1.0.0-beta.36",
+    "moment": "^2.21.0",
     "query-string": "^5.1.0",
     "ramda": "^0.25.0",
     "react": "^16.2.0",
